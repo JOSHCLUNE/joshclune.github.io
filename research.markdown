@@ -59,7 +59,7 @@ challenge. In a perfect world, every student would receive personalized human fe
 </p>
  
 <p>
-To learn more about how Zeus is designed, and how it can be used to make human feedback more accessible, feel free to watch my OOPSLA talk embedded above. For more information on Zeus' theoretical foundations, you can read our conference paper <a href="{{ site.baseurl }}/pdfs/zeus.pdf">here</a> and its extended version <a href="{{ site.baseurl }}/pdfs/zeus_extended.pdf">here</a>. 
+To learn more about how Zeus is designed, and how it can be used to make human feedback more accessible, feel free to watch my OOPSLA talk embedded above. For more information on Zeus' theoretical foundations, you can read our conference paper <a href="{{ site.baseurl }}/pdfs/Zeus.pdf">here</a> and its extended version <a href="{{ site.baseurl }}/pdfs/Zeus_extended.pdf">here</a>. 
 </p>
 </div>
 <script src="{{site.base.url}}/js/common.js"></script>
