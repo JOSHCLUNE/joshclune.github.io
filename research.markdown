@@ -43,7 +43,7 @@ The proof that Keller's Conjecture holds in dimension 7 critically relies on a r
 </p>
 
 <p>
-My research involves developing an extension to LF that supports representing and reasoning about polymorphic types. The primary aims for this work are to define the extension’s type system and semantics, validate it by proving that the system honors identity expansion and cut admissibility, and potentially formalize the extension and the proofs that validate it in Coq.
+My research with <a href="https://www.cs.cmu.edu/~crary/">Karl Crary</a> involves developing an extension to LF that supports representing and reasoning about polymorphic types. The primary aims for this work are to define the extension’s type system and semantics, validate it by proving that the system honors identity expansion and cut admissibility, and potentially formalize the extension and the proofs that validate it in Coq.
 </p>
 </div>
 
