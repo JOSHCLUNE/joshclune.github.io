@@ -45,7 +45,7 @@ Keller's Conjecture states that this trend holds in arbitrary dimensions. As it 
 </p>
 
 <p>
-The proof that Keller's Conjecture holds in 7 dimensions critically relies on a reduction from the original geometric conjecture to a finite graph clique problem. My research involved using the Lean 3 theorem prover to formalize and verify this reduction. I also used this formalized reduction to produce the first verified proof that Keller's Conjecture is false in 8 dimensions. You can read more about this work <a href="{{ site.baseurl }}/pdfs/Keller_reduction.pdf">here</a>, and you can check out the formal proofs <a href="https://github.com/JOSHCLUNE/Keller_reduction">here</a>.
+The proof that Keller's Conjecture holds in 7 dimensions critically relies on a reduction from the original geometric conjecture to a finite graph clique problem. My research involved using the Lean 3 theorem prover to formalize and verify this reduction. I also used this formalized reduction to produce the first verified proof that Keller's Conjecture is false in 8 dimensions. You can read more about this work <a href="{{ site.baseurl }}/pdfs/Keller_Reduction.pdf">here</a>, and you can check out the formal proofs <a href="https://github.com/JOSHCLUNE/Keller_reduction">here</a>.
 </p>
 </div>
 
