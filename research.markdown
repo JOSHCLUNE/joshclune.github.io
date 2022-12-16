@@ -9,12 +9,27 @@ permalink: /research/
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Keller')" id="defaultOpen">Keller Reduction</button>
+  <button class="tablinks" onclick="openCity(event, 'Duper')" id="defaultOpen">Duper</button>
+  <button class="tablinks" onclick="openCity(event, 'Keller')">Keller Reduction</button>
   <button class="tablinks" onclick="openCity(event, 'PLF')">PLF</button>
   <button class="tablinks" onclick="openCity(event, 'Zeus')">Zeus</button>
 </div>
 
 <!-- Tab content -->
+<div id="Duper" class="tabcontent">
+<h4>Duper: A Higher-Order Proof Producing Theorem Prover</h4>
+<center>
+<img style="float: center; padding-bottom: 5px" src="../img/Duper_Example.png" alt="A screenshot of Duper proving a Group theory lemma" width="620"/>
+</center>
+
+<p>
+One of the most important factors impacting the usability of an interactive theorem prover (ITP) is the power of its automation. For example, in Isabelle/HOL, the general purpose automation provided by Metis and Sledgehammer has become an essential part of the typical user's workflow.
+</p>
+<p>
+Most current ITP automation is either targeted to a particular domain or designed primarily for first-order logic. But most ITPs support a language much richer than that of first-order logic. My research with Yicheng Qian and <a href="https://abentkamp.github.io/">Alexander Bentkamp</a> concerns general-purpose ITP automation designed to handle higher-order logic. Together we are developing <a href="https://github.com/leanprover-community/duper">Duper</a>, an automatic theorem prover in Lean 4 based on the superposition calculus. We intend to make Duper capable of native higher-order reasoning, and we are also exploring how it might be extended to additionally support reasoning in the presence of dependent types.
+</p>
+</div>
+
 <div id="Keller" class="tabcontent">
 <h4>A Formalized Reduction of Keller's Conjecture</h4>
 <center>
@@ -26,11 +41,11 @@ If you attempted to entirely cover a 2-dimensional Euclidean plane with non-over
 </p>
 
 <p>
-Keller's Conjecture states that this trend holds in arbitrary dimensions. In precise terms, it states that any tiling of n-dimensional Euclidean space by identical hypercubes must contain at least two hypercubes that share an (n-1)-dimensional face. As it turns out, Keller's Conjecture is true up to and including dimension 7, and false afterwards, a result that strikes me as deeply arbitrary.
+Keller's Conjecture states that this trend holds in arbitrary dimensions. As it turns out, Keller's Conjecture is true in 7 or fewer dimensions, and is false in 8 or more dimensions.
 </p>
 
 <p>
-The proof that Keller's Conjecture holds in dimension 7 critically relies on a reduction from the original geometric conjecture to a finite graph clique problem. My research involves using the interactive theorem prover Lean to formalize this reduction and obtained a verified proof of it. 
+The proof that Keller's Conjecture holds in 7 dimensions critically relies on a reduction from the original geometric conjecture to a finite graph clique problem. My research involved using the Lean 3 theorem prover to formalize and verify this reduction. I also used this formalized reduction to produce the first verified proof that Keller's Conjecture is false in 8 dimensions. You can read more about this work <a href="{{ site.baseurl }}/pdfs/Keller_reduction.pdf">here</a>, and you can check out the formal proofs <a href="https://github.com/JOSHCLUNE/Keller_reduction">here</a>.
 </p>
 </div>
 
