@@ -33,7 +33,7 @@ Most current ITP automation is either targeted to a particular domain or designe
 <div id="Keller" class="tabcontent">
 <h4>A Formalized Reduction of Keller's Conjecture</h4>
 <center>
-<img style="float: center; padding-bottom: 20px" src="../img/Keller_Picture.png" alt="An arrow pointing from a tiling of three-dimensional cubes to a Keller graph" width="400"/>
+<iframe height="175px" src="https://www.youtube.com/embed/3EtEGxWB6Gs" allowfullscreen="true"></iframe>
 </center>
 
 <p>
