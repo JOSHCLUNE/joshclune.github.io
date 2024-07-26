@@ -17,7 +17,7 @@ permalink: /research/
 
 <!-- Tab content -->
 <div id="Duper" class="tabcontent">
-<h4>Duper: A Higher-Order Proof Producing Theorem Prover</h4>
+<h4>Duper: An Automatic Theorem Prover for Dependent Type Theory</h4>
 <center>
 <img style="float: center; padding-bottom: 5px" src="../img/Duper_Example.png" alt="A screenshot of Duper proving a Group theory lemma" width="620"/>
 </center>
@@ -26,7 +26,7 @@ permalink: /research/
 One of the most important factors impacting the usability of an interactive theorem prover (ITP) is the power of its automation. For example, in Isabelle/HOL, the general purpose automation provided by Metis and Sledgehammer has become an essential part of the typical user's workflow.
 </p>
 <p>
-Most current ITP automation is either targeted to a particular domain or designed primarily for first-order logic. But most ITPs support a language much richer than that of first-order logic. My research with Yicheng Qian and <a href="https://abentkamp.github.io/">Alexander Bentkamp</a> concerns general-purpose ITP automation designed to handle higher-order logic. Together we are developing <a href="https://github.com/leanprover-community/duper">Duper</a>, an automatic theorem prover in Lean 4 based on the superposition calculus. We intend to make Duper capable of native higher-order reasoning, and we are also exploring how it might be extended to additionally support reasoning in the presence of dependent types.
+Most current ITP automation is either targeted to a particular domain or designed primarily for first-order logic. But most ITPs support languages much richer than that of first-order logic. My research with Yicheng Qian and <a href="https://abentkamp.github.io/">Alexander Bentkamp</a> concerns general-purpose ITP automation designed to effectively operate in Lean's dependently typed setting. Together we are developing <a href="https://github.com/leanprover-community/duper">Duper</a>, an automatic theorem prover in Lean 4 based on the superposition calculus. To learn more about Duper, feel free to read <a href="{{ site.baseurl }}/pdfs/Duper.pdf">this</a> conference paper. 
 </p>
 </div>
 
