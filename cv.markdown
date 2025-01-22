@@ -1,7 +1,7 @@
 ---
 layout: page
-title: CV 
+title: Resume & CV 
 permalink: /cv/
 ---
 
-Download my curriculum vitae [here](/pdfs/CV.pdf).
+Download my resume [here](/pdfs/Resume.pdf) or my curriculum vitae [here](/pdfs/CV.pdf).
