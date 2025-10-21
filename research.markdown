@@ -9,13 +9,45 @@ permalink: /research/
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Duper')" id="defaultOpen">Duper</button>
+  <button class="tablinks" onclick="openCity(event, 'LeanHammer')" id="defaultOpen">LeanHammer</button>
+  <button class="tablinks" onclick="openCity(event, 'QuerySMT')">QuerySMT</button>
+  <button class="tablinks" onclick="openCity(event, 'Duper')">Duper</button>
   <button class="tablinks" onclick="openCity(event, 'Keller')">Keller Reduction</button>
   <button class="tablinks" onclick="openCity(event, 'PLF')">PLF</button>
   <button class="tablinks" onclick="openCity(event, 'Zeus')">Zeus</button>
 </div>
 
 <!-- Tab content -->
+<div id="LeanHammer" class="tabcontent">
+<h4>LeanHammer: A Domain-General Hammer for Lean</h4>
+<center>
+<img style="float: center; padding-bottom: 5px" src="../img/Hammer_Example.png" alt="A screenshot of LeanHammer proving a simple fact" width="700"/>
+</center>
+
+<p>
+In an interactive theorem proving context, a <i>hammer</i> is a tool that integrates premise selection, translation to external automatic theorem provers, and proof reconstruction into one overarching tool to automate tedious reasoning steps. In Isabelle/HOL, the general purpose automation provided by Sledgehammer has become an essential part of the typical user's workflow.
+</p>
+
+<p>
+Much of my research has related to the development of a hammer for Lean. <a href="https://thomaszhu.cn/">Thomas Zhu</a>, <a href="https://wellecks.com/">Sean Welleck</a>, <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a>, and I developed <a href="https://github.com/hanwenzhu/premise-selection">LeanPremise</a>, a neural premise selector specifically trained for a Lean Hammer. I have contributed to <a href="https://github.com/leanprover-community/lean-auto">Lean-auto</a>, an interface between Lean and automated theorem provers developed primarily by Yicheng Qian. I also developed <a href="https://github.com/leanprover-community/duper">Duper</a>, a superposition theorem prover for dependent type theory, along with Yicheng Qian, <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a>, and <a href="https://abentkamp.github.io/">Alexander Bentkamp</a>. Each of these projects serve as components in <a href="https://github.com/JOSHCLUNE/LeanHammer">LeanHammer</a>, an end-to-end domain general hammer for Lean.
+</p>
+</div>
+
+<div id="QuerySMT" class="tabcontent">
+<h4>Hint-Based SMT Proof Reconstruction</h4>
+<center>
+<img style="float: center; padding-bottom: 5px" src="../img/QuerySMT_Example.png" alt="A screenshot of QuerySMT proving a simple arithmetic fact" width="700"/>
+</center>
+
+<p>
+There are several paradigms for integrating interactive and automated theorem provers, combining the convenience of powerful automation with strong soundness guarantees. These paradigms vary both in how they translate problems between the technologies' respective languages, and in how they leverage proofs discovered by automation. 
+</p>
+
+<p>
+My research with <a href="https://hanielbarbosa.com/">Haniel Barbosa</a> and <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a> explores a new approach to reconstructing proofs found by SMT solvers. Rather than verifying or replaying a full proof produced by the SMT solver, or at the other extreme, rediscovering the solver’s proof from just the set of premises it uses, we explore an approach which helps guide an interactive theorem prover’s internal automation by leveraging derived facts during solving. This enables our Lean tactic, <a href="https://github.com/JOSHCLUNE/LeanSMTParser">QuerySMT</a>, to use hints disocvered by <a href="https://github.com/cvc5/cvc5">cvc5</a> to generate structured proof scripts which don't depend on the external solver.
+</p>
+</div>
+
 <div id="Duper" class="tabcontent">
 <h4>Duper: An Automatic Theorem Prover for Dependent Type Theory</h4>
 <center>
@@ -26,7 +58,7 @@ permalink: /research/
 One of the most important factors impacting the usability of an interactive theorem prover (ITP) is the power of its automation. For example, in Isabelle/HOL, the general purpose automation provided by Metis and Sledgehammer has become an essential part of the typical user's workflow.
 </p>
 <p>
-Most current ITP automation is either targeted to a particular domain or designed primarily for first-order logic. But most ITPs support languages much richer than that of first-order logic. My research with Yicheng Qian and <a href="https://abentkamp.github.io/">Alexander Bentkamp</a> concerns general-purpose ITP automation designed to effectively operate in Lean's dependently typed setting. Together we are developing <a href="https://github.com/leanprover-community/duper">Duper</a>, an automatic theorem prover in Lean 4 based on the superposition calculus. To learn more about Duper, feel free to read <a href="{{ site.baseurl }}/pdfs/Duper.pdf">this</a> conference paper. 
+Most current ITP automation is either targeted to a particular domain or designed primarily for first-order logic. But most ITPs support languages much richer than that of first-order logic. My research with Yicheng Qian, <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a>, and <a href="https://abentkamp.github.io/">Alexander Bentkamp</a> concerns general-purpose ITP automation designed to effectively operate in Lean's dependently typed setting. Together we are developing <a href="https://github.com/leanprover-community/duper">Duper</a>, an automatic theorem prover in Lean 4 based on the superposition calculus. To learn more about Duper, feel free to read <a href="{{ site.baseurl }}/pdfs/Duper.pdf">this</a> conference paper. 
 </p>
 </div>
 
@@ -70,7 +102,7 @@ My research with <a href="https://www.cs.cmu.edu/~crary/">Karl Crary</a> involve
   <p>In courses that involve programming assignments, giving meaningful feedback to students is an important
 challenge. In a perfect world, every student would receive personalized human feedback. But as computer science courses grow in demand, this ideal is increasingly costly.</p>
 
-<p>To make human feedback more accessible, even as class sizes grow considerably, I worked with <a href="https://vijayramamurthy.me/">Vijay Ramamurthy</a>, <a href="https://sat-group.github.io/ruben/">Ruben Martins</a>, and <a href="https://www.umut-acar.org/">Umut Acar</a> to create <a href="https://github.com/CMU-TOP/zeus">Zeus</a>. Zeus is a tool that can take a set of programs written in Standard ML, and, using the SMT solver Z3, partition them into buckets of provably equivalent programs. This makes it possible to simultaneously give human feedback to all students that implemented the same algorithm or made the same error.
+<p>To make human feedback more accessible, even as class sizes grow considerably, I worked with <a href="https://vijayramamurthy.com/">Vijay Ramamurthy</a>, <a href="https://sat-group.github.io/ruben/">Ruben Martins</a>, and <a href="https://www.umut-acar.org/">Umut Acar</a> to create <a href="https://github.com/CMU-TOP/zeus">Zeus</a>. Zeus is a tool that can take a set of programs written in Standard ML, and, using the SMT solver Z3, partition them into buckets of provably equivalent programs. This makes it possible to simultaneously give human feedback to all students that implemented the same algorithm or made the same error.
 </p>
  
 <p>
