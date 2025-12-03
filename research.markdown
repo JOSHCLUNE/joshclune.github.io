@@ -44,7 +44,7 @@ There are several paradigms for integrating interactive and automated theorem pr
 </p>
 
 <p>
-My research with <a href="https://hanielbarbosa.com/">Haniel Barbosa</a> and <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a> explores a new approach to reconstructing proofs found by SMT solvers. Rather than verifying or replaying a full proof produced by the SMT solver, or at the other extreme, rediscovering the solver’s proof from just the set of premises it uses, we explore an approach which helps guide an interactive theorem prover’s internal automation by leveraging derived facts during solving. This enables our Lean tactic, <a href="https://github.com/JOSHCLUNE/LeanSMTParser">QuerySMT</a>, to use hints disocvered by <a href="https://github.com/cvc5/cvc5">cvc5</a> to generate structured proof scripts which don't depend on the external solver.
+My research with <a href="https://hanielbarbosa.com/">Haniel Barbosa</a> and <a href="https://www.andrew.cmu.edu/user/avigad/">Jeremy Avigad</a> explores a new approach to reconstructing proofs found by SMT solvers. Rather than verifying or replaying a full proof produced by the SMT solver, or at the other extreme, rediscovering the solver’s proof from just the set of premises it uses, we explore an approach which helps guide an interactive theorem prover’s internal automation by leveraging derived facts during solving. This enables our Lean tactic, <a href="https://github.com/JOSHCLUNE/LeanSMTParser">QuerySMT</a>, to use hints disocvered by <a href="https://github.com/cvc5/cvc5">cvc5</a> to generate structured proof scripts which don't depend on the external solver. To learn more about QuerySMT, feel free to read <a href="{{ site.baseurl }}/pdfs/QuerySMT.pdf">this</a> paper.
 </p>
 </div>
 
